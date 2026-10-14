@@ -15,21 +15,32 @@
 
 <body>
     <main class="container-sorteador">
+
         <img id="logo" src="./assets/Logo 1.png" alt="Logo do Sorteador de Números" width="200">
-        <p id="paragraph-main">Sortear um número entre:</p>
-        <div id="input-container">
-            <input type="number" id="input-min" placeholder="Mínimo">
-            <p id="and">e</p>
-            <input type="number" id="input-max" placeholder="Máximo">
+        <h1 class="paragraph-main">Sortear um número entre:</h1>
+
+        <div class="input-container">
+            <p class="value-min">Mínimo</p>
+            <input type="number" min="0" max="99999" oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-min" placeholder="0">
+            <p class="value-max">Máximo</p>
+            <input type="number" min="0" max="99999" oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-max" placeholder="99999">
+        </div>
+        <div id="container-count">
+            <p id="title-count-draw">Quantidade de números que serão sorteados:</p>
+            <input type="number" min="0" max="99" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);" id="draw-count" value="1">
         </div>
         <button id="btn-sortear">Sortear</button>
-        <p id="resultado"></p>
+        <div id="container-result">
+            <p id="title-result"></p>
+            <p id="result"></p>
+        </div>
+
     </main>
-    
+
 
 
     <footer>
-        <p>EmDev Desenvolvedor</p>
+        <p>2026 - CiDev</p>
     </footer>
 
 </body>

@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #ffffff;
     background-image: url(./assets/Background\ 2.png);
     /* Centraliza a imagem na tela */
     background-position: center;
@@ -26,12 +26,10 @@ body {
 .container-sorteador {
     background-color: #62616175;
     border: 0.125rem solid blanchedalmond;
-    /* 2px equivalente */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25rem;
-    /* 400px equivalente */
+    width: 50rem;
     padding: 1.5rem;
     /* 24px equivalente */
     border-radius: 0.5rem;
@@ -43,42 +41,38 @@ body {
     /* Inclui o padding no cálculo da largura */
     margin-top: 15px;
     margin-bottom: 15px;
-   
-
 }
 
 #logo {
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 150px;
     margin: 5px 728px 15px 728px;
 }
 
-#paragraph-main {
-
-    font-weight: 400;
-    font-size: 25px;
-    width: max-content;
-    height: 30px;
-    letter-spacing: 0px;
-    line-height: 100%;
-    margin: 10px 803px 29px 803px;
+.paragraph-main {
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
     text-transform: uppercase;
-    color: #fff;
-    /* Efeito de brilho neon */
-    text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #010030, #305596, #2d0057);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
 }
 
-#input-container {
+.input-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    /* Espaço entre os elementos */
 }
 
-#and {
+.value-min,
+.value-max {
     font-weight: 400;
-    font-size: 25px;
+    font-size: 15px;
     letter-spacing: 0px;
     color: #fff;
     /* Efeito de brilho neon */
@@ -106,74 +100,109 @@ input[type="number"]::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
-    appearance: textfield; /* Boa prática para futuras padronizações */
+    appearance: textfield;
+    /* Boa prática para futuras padronizações */
+}
+
+#container-count {
+    display: flex;
+    align-items: center;
+}
+
+#title-count-draw {
+    font-weight: 400;
+    font-size: 20px;
+    width: max-content;
+    height: 30px;
+    letter-spacing: 0px;
+    line-height: 100%;
+    margin: 30px 15px 10px 0px;
+    color: #fff;
+    /* Efeito de brilho neon */
+    text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
+    letter-spacing: 1px;
+}
+
+#draw-count {
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 4px;
 }
 
 #btn-sortear {
+    width: 75%;
     margin: 20px 0;
-    /* Cores e Fundo */
     background-color: #3498db;
-    /* Azul */
     color: #ffffff;
-    /* Texto branco */
-
-    /* Tamanho e Espaçamento */
     padding: 12px 24px;
-    /* Espaço interno (vertical e horizontal) */
-    font-size: 16px;
-    /* Tamanho do texto */
+    font-size: 25px;
     font-weight: bold;
-    /* Texto em negrito */
-
-    /* Bordas e Formato */
     border: none;
-    /* Remove a borda padrão */
     border-radius: 8px;
-    /* Arredonda os cantos */
-
-    /* Interação e Animação */
     cursor: pointer;
-    /* Muda o cursor para a "mãozinha" */
     transition: all 0.3s ease;
     /* Transição suave para os efeitos */
 }
 
-button:hover {
-    /*  opacity: 0.8; */
-    background-color: #2980b9;
-    /* Tom de azul mais escuro */
-    transform: translateY(-2px);
-    /* Sobe o botão levemente */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    /* Sombra projetada */
+#btn-sortear:hover {
+    background-color: #023b62;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
 }
 
-button:active {
-    /*  opacity: 0.6; */
+#btn-sortear:active {
     transform: translateY(0);
     /* Volta para a posição original */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     /* Diminui a sombra */
 }
 
-button:focus {
+#btn-sortear:focus {
     outline: none;
-}
+}   
 
 input:focus {
     outline: none;
     background-color: rgb(224, 223, 223);
 }
 
+#container-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    max-width: calc(100% - 40px);
+    box-sizing: border-box;
+    margin-top: 0px;
+    margin-bottom: 0px
+}
 
-
-#resultado {
-    color: #ffffff;
+#title-result {
     font-weight: 400;
-    font-size: 100px;
+    font-size: 25px;
+    width: max-content;
+    height: 30px;
+    letter-spacing: 0px;
+    line-height: 100%;
+    margin: 10px 803px 15px 803px;
+    color: #fff;
+    /* Efeito de brilho neon */
+    text-shadow: 0 0 5px #0083fe, 0 0 10px #00a5fe, 0 0 20px #4f89fe;
+    letter-spacing: 1px;
+}
+
+#result {
+    color: #000000;
+    font-weight: 400;
+    font-size: 30px;
     width: auto;
     height: auto;
     letter-spacing: 0px;
     line-height: 100%;
-    margin: 0px 803px 29px 803px;
+    margin: 10px;
 }
