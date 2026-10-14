@@ -59,7 +59,7 @@ function sortear() {
     }
 
     // --- PASSO 2: Execução das Etapas do Sorteio ---
-    
+
     // Escolhe uma posição aleatória com base no que sobrou na lista
     const indiceAleatorio = Math.floor(Math.random() * numerosDisponiveis.length);
     // Remove o número da lista para que ele nunca mais se repita
@@ -73,26 +73,35 @@ function sortear() {
         title: 'Sorteando...',
         text: 'Por favor, aguarde o resultado.',
         imageUrl: './assets/espera2.gif',
-        imageWidth: 400,
-        imageHeight: 400,
-        showConfirmButton: false, 
-        allowOutsideClick: false, 
+        imageWidth: 600,
+        imageHeight: 500,
+        showConfirmButton: false,
+        allowOutsideClick: false,
+        background: '#1e1e24', // Define a cor de fundo escura
+        color: '#ffffff'
     });
 
     // Aguarda o término da animação (5 segundos) para mostrar as informações
     setTimeout(() => {
         containerResult.style.backgroundColor = '#d5d5d5ac';
         titleResult.textContent = 'Resultado';
-        
+
         // Exibe todos os números acumulados até esta rodada no container da página
         resultado.textContent = numerosSorteadosAteAgora.join(" - ");
 
         // Abre a caixa de diálogo do SweetAlert2 informando o vencedor atual da rodada
         Swal.fire({
-            title: 'Temos um vencedor!',
-            html: `O número sorteado foi: <br><span style="color: #ff0000; font-weight: bold; font-size: 100px;">${numeroSorteado}</span>`,
+            title: 'Número Sorteado!',
+            html: `O número sorteado foi: <br><span style="color: #00f2fe; font-weight: bold; font-size: 100px;">${numeroSorteado}</span>`,
             icon: 'success',
-            confirmButtonText: 'Legal!'
+            iconColor: '#00f2fe', // Deixa o ícone de checked na cor do seu neon
+
+            // Aqui faz a mágica de conectar com o seu CSS customizado
+            customClass: {
+                popup: 'swal-neon-popup',
+                confirmButton: 'swal-neon-button'
+            },
+            buttonsStyling: false // Desativa o estilo padrão cinza do SweetAlert nos botões
         });
 
         // --- PASSO 3: Gerenciar o estado do botão ---
@@ -110,16 +119,3 @@ function sortear() {
 
 sorteioButton.addEventListener('click', sortear);
 
-Swal.fire({
-  title: 'Número Sorteado!',
-  html: 'O número da vez é: <b style="color: #00f2fe; font-size: 2rem;">7</b>',
-  icon: 'success',
-  iconColor: '#00f2fe', // Deixa o ícone de checked na cor do seu neon
-  
-  // Aqui faz a mágica de conectar com o seu CSS customizado
-  customClass: {
-    popup: 'swal-neon-popup',
-    confirmButton: 'swal-neon-button'
-  },
-  buttonsStyling: false // Desativa o estilo padrão cinza do SweetAlert nos botões
-});
