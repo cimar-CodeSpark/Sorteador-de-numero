@@ -38,8 +38,9 @@ body {
 /* CORRIGIDO: Removido margens gigantescas de 728px que quebravam o mobile */
 #logo {
     width: 200px;
-    height: auto; /* Mantém a proporção */
-    margin: 15px auto; 
+    height: auto;
+    /* Mantém a proporção */
+    margin: 15px auto;
 }
 
 .paragraph-main {
@@ -61,12 +62,11 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap;
     justify-content: center;
 }
 
-.value-min,
-.value-max {
+.text-min,
+.text-max {
     font-weight: 400;
     font-size: 15px;
     color: #fff;
@@ -102,15 +102,29 @@ input[type="number"] {
     justify-content: center;
 }
 
-#title-count-draw {
-    font-weight: 400;
+.title-count-draw {
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-size: 2rem;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #010030, #305596, #2d0057);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+
+    /* font-weight: 400;
     font-size: 20px;
     width: max-content;
     height: 30px;
     margin: 30px 15px 10px 0px;
     color: #fff;
     text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
-    letter-spacing: 1px;
+    letter-spacing: 1px; */
 }
 
 #draw-count {
@@ -147,9 +161,10 @@ input[type="number"] {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-#btn-sortear:focus, input:focus {
+#btn-sortear:focus,
+input:focus {
     outline: none;
-}   
+}
 
 input:focus {
     background-color: rgb(224, 223, 223);
@@ -194,11 +209,14 @@ input:focus {
 
 /* Container principal do Alerta */
 .swal-neon-popup {
-    background: rgba(30, 30, 30, 0.95) !important; /* Fundo escuro gamer semi-transparente */
-    border: 2px solid #00f2fe !important; /* Borda Neon combinando com seus textos */
+    background: rgba(30, 30, 30, 0.95) !important;
+    /* Fundo escuro gamer semi-transparente */
+    border: 2px solid #00f2fe !important;
+    /* Borda Neon combinando com seus textos */
     box-shadow: 0 0 20px rgba(0, 242, 254, 0.4) !important;
     border-radius: 12px !important;
-    max-width: 95% !important; /* Impede que ele saia da tela no celular */
+    max-width: 95% !important;
+    /* Impede que ele saia da tela no celular */
 }
 
 /* Customização dos textos internos do Swal */
@@ -230,13 +248,29 @@ input:focus {
 
 /* Regras de Responsividade Geral da Página */
 @media (max-width: 600px) {
-    .paragraph-main {
-        font-size: 1.5rem; /* Diminui o título principal no celular */
+
+    .paragraph-main,
+    .title-count-draw {
+        font-size: 1.5rem;
+        /* Diminui o título principal no celular */
     }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    #container-count {
+    margin-top: 25px;
+}
+
+.title-count-draw {
+    margin-bottom: 0;
+}
     #btn-sortear {
         font-size: 20px;
         width: 90%;
     }
+
     .swal-neon-popup .swal2-title {
         font-size: 1.4rem !important;
     }
