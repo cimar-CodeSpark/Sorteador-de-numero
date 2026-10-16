@@ -7,7 +7,7 @@ Construído com **HTML, CSS e JavaScript**, o projeto possui uma interface moder
 
 ## 🚀 Funcionalidades
 - Definir um número **mínimo** e **máximo** para o sorteio.
-- Escolher a **quantidade de sorteios**. (em construção)
+- Escolher a **quantidade de sorteios**.
 - Exibir o resultado com **alertas animados**.
 - Interface responsiva com **efeito neon** e fundo personalizado.
 - Feedback visual com destaque para o número sorteado.
@@ -29,7 +29,7 @@ Construído com **HTML, CSS e JavaScript**, o projeto possui uma interface moder
 
 ## ▶️ Como Usar
 1. Defina os valores mínimo e máximo.
-2. Escolha a quantidade de sorteios. (em construção)
+2. Escolha a quantidade de sorteios.
 3. Clique em "Sortear" e veja o resultado!
 
 📸 Exemplo de Uso
