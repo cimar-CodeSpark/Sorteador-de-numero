@@ -20,14 +20,19 @@
         <h1 class="paragraph-main">Sortear um número entre:</h1>
 
         <div class="input-container">
-            <label class="text-min" for="input-max">Máximo:</label>
-            <input type="number" min="0" max="99999" oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-max" placeholder="99999">
             <label class="text-max" for="input-min">Mínimo:</label>
-            <input type="number" min="0" max="99999" oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-min" placeholder="0">
+            <input type="number" min="0" max="99999"
+                oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-min" placeholder="0">
+
+            <label class="text-min" for="input-max">Máximo:</label>
+            <input type="number" min="0" max="99999"
+                oninput="if(this.value.length > 5) this.value = this.value.slice(0, 5);" id="input-max"
+                placeholder="99999">
         </div>
         <div id="container-count">
             <p class="title-count-draw">Quantidade de números que serão sorteados:</p>
-            <input type="number" min="0" max="99" oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);" id="draw-count" value="1">
+            <input type="number" min="0" max="99"
+                oninput="if(this.value.length > 2) this.value = this.value.slice(0, 2);" id="draw-count" value="1">
         </div>
         <button id="btn-sortear">Sortear</button>
         <div id="container-result">

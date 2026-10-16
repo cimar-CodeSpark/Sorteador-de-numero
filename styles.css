@@ -20,7 +20,7 @@ body {
 }
 
 .container-sorteador {
-    background-color: #62616175;
+    background-color: #626161a9;
     border: 0.125rem solid blanchedalmond;
     display: flex;
     flex-direction: column;
@@ -43,18 +43,21 @@ body {
     margin: 15px auto;
 }
 
-.paragraph-main {
-    font-weight: 700;
+.paragraph-main,
+.title-count-draw {
+    font-weight: bold;
     text-align: center;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 30px;
-    background: linear-gradient(135deg, #010030, #305596, #2d0057);
+    margin-bottom: 0;
+    background: linear-gradient(135deg, #48d6e6, #69b9ff, #0099ff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+    color: transparent;
+    /* Fallback para garantir transparência */
+    display: inline-block
 }
 
 /* RESPONSIVIDADE: Ajusta para coluna no celular para os inputs não esmagarem */
@@ -67,9 +70,9 @@ body {
 
 .text-min,
 .text-max {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 15px;
-    color: #fff;
+    color: #676666;
     text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
     letter-spacing: 1px;
 }
@@ -100,31 +103,7 @@ input[type="number"] {
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.title-count-draw {
-    color: #fff;
-    font-weight: 700;
-    text-align: center;
-    font-size: 2rem;
-    flex-wrap: wrap;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-    background: linear-gradient(135deg, #010030, #305596, #2d0057);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
-
-    /* font-weight: 400;
-    font-size: 20px;
-    width: max-content;
-    height: 30px;
-    margin: 30px 15px 10px 0px;
-    color: #fff;
-    text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
-    letter-spacing: 1px; */
+    margin-top: 25px;
 }
 
 #draw-count {
@@ -259,13 +238,6 @@ input:focus {
         flex-direction: column;
     }
 
-    #container-count {
-    margin-top: 25px;
-}
-
-.title-count-draw {
-    margin-bottom: 0;
-}
     #btn-sortear {
         font-size: 20px;
         width: 90%;
