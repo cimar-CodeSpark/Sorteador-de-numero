@@ -50,8 +50,8 @@ body {
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 0;
-    background: linear-gradient(135deg, #48d6e6, #69b9ff, #0099ff);
+    margin-bottom: 5px;
+    background: linear-gradient(135deg, #6fc3fb, #67c2ff, #59eeff);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -71,7 +71,7 @@ body {
 .text-min,
 .text-max {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 20px;
     color: #676666;
     text-shadow: 0 0 5px #00f2fe, 0 0 10px #00f2fe, 0 0 20px #4facfe;
     letter-spacing: 1px;
@@ -232,6 +232,7 @@ input:focus {
     .title-count-draw {
         font-size: 1.5rem;
         /* Diminui o título principal no celular */
+        
     }
 
     .input-container {
